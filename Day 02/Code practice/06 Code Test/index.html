@@ -39,6 +39,8 @@
     // iterating array and set value
     followerList = followerList.map((li) => <li>{li}</li>)
 
+    let privateData = {name:"Omathage",gf:"none"}
+
 
 
     const APP =(
@@ -52,6 +54,8 @@
             <ul>
                 {followerList}
             </ul>
+            <p>{privateData.gf}</p>
+            <p>{privateData.name}</p>
         </>
     )
 
