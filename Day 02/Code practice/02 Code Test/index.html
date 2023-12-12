@@ -29,18 +29,21 @@
     //  - need to be wrapped with parent element or use jsx fragments
     //let testHeader3 = <small>test 1</small> <small>test 1</small>
 
+    // invalid multiple jsx implementation
+    // let testHeader4 =  {testHeader,testHeader2}
+    // console.log(JSON.stringify(testHeader4))
     // what is the best way to write the multiple jsx element
 
     // this is the best ways to write jsx
-    let testHeader4 = (
+    let testHeader5 = (
         <div>
             <h1>dilshan</h1>
             <h1>shivantha</h1>
         </div> // you can use jsx fragment instead of parent elements
     )
-    console.log(JSON.stringify(testHeader4))
+    // console.log(JSON.stringify(testHeader5))
 
-    ReactDOM.render(testHeader4, rootElement);
+    ReactDOM.render(testHeader5, rootElement);
 </script>
 </body>
 </html>
