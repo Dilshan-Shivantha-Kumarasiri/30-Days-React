@@ -36,9 +36,6 @@
     let todayDate = new Date().getFullYear();
     let friendList = ["dilshan","kasun"]
     let followerList = ["Janith","Maneth","Kusali"];
-    // iterating array and set value
-    followerList = followerList.map((li) => <li>{li}</li>)
-
     let privateData = {name:"Omathage",gf:"none"}
 
 
@@ -52,7 +49,7 @@
             <p>{todayDate}</p>
             <p>friend list : {friendList.join(" ")}</p>
             <ul>
-                {followerList}
+                {followerList.map((li) => <li key= {li}>{li}</li>)}
             </ul>
             <p>{privateData.gf}</p>
             <p>{privateData.name}</p>
