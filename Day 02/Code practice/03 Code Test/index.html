@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Template 01</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root">
+
+</div>
+
+<script type="text/babel">
+    let rootElement = document.getElementById("root");
+    // in this project lear how to use multiple component
+    const HEADER = (
+        <h1>this is the header</h1>
+    )
+
+    const MAIN = (
+        <h3>This is the main content</h3>
+    )
+
+    const  FOOTER = (
+        <small>This is the footer</small>
+    )
+
+    // can not add like these
+    // const APP = (
+    //     {HEADER}
+    //     {MAIN}
+    // )
+
+    const APP =(
+        <>
+            {HEADER}
+            {MAIN}
+            {FOOTER}
+        </>
+    )
+
+    console.log(JSON.stringify(APP))
+    console.log(" ")
+
+    const APP2 =[HEADER,MAIN,FOOTER]
+    console.log(JSON.stringify(APP2))
+
+    ReactDOM.render(APP2, rootElement);
+</script>
+</body>
+</html>
