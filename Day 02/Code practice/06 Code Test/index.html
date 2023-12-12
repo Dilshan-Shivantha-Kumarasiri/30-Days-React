@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Template 01</title>
-    <link rel="stylesheet" href="/05 Code Test/style.css">
+    <link rel="stylesheet" href="/05%20Code%20Test/style.css">
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -18,41 +18,46 @@
 </div>
 
 <script type="text/babel">
+
     let rootElement = document.getElementById("root");
     // in this project lear how to use multiple component
 
-    // how to apply inline css to the jsx element
-    const style = {color:"blue"}
+    // the dynamic data can be the "number,string,boolean,array,object"
 
-    const HEADER = (
-        <h1 style={{color:"red"}}>this is the header</h1>
-    )
+    //usage of string dynamic data
+    let userName = "dilshan"
+    //usage of number dynamic data
+    let userAge = 15;
+    //usage of boolean dynamic data
+    let isAdult = true; // can not use direct need to convert to string
+    //usage of number dynamic data manipulate
+    let userAverageResult = 95;
+    // manipulate date using the date object
+    let todayDate = new Date().getFullYear();
+    let friendList = ["dilshan","kasun"]
+    let followerList = ["Janith","Maneth","Kusali"];
+    // iterating array and set value
+    followerList = followerList.map((li) => <li>{li}</li>)
 
-    // how to use class in jsx (className)
-    const MAIN = (
-        <h3 className="main-content">This is the main content</h3>
-    )
 
-    const  FOOTER = (
-        <small style={style}>This is the footer</small>
-    )
 
     const APP =(
         <>
-            {HEADER}
-            {MAIN}
-            {FOOTER}
+            <p>{userName}</p>
+            <p>{userAge}</p>
+            <p>{isAdult.toString()}</p>
+            <p>{userAverageResult-5} - {5}</p>
+            <p>{todayDate}</p>
+            <p>friend list : {friendList.join(" ")}</p>
+            <ul>
+                {followerList}
+            </ul>
         </>
     )
 
-    console.log(JSON.stringify(APP))
-    console.log(" ")
+    ReactDOM.render(APP, rootElement);
 
-    // this is work when using the array
-    const APP2 =[HEADER,MAIN,FOOTER]
-    console.log(JSON.stringify(APP2))
 
-    ReactDOM.render(APP2, rootElement);
 </script>
 </body>
 </html>
