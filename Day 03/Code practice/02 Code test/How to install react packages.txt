@@ -1,0 +1,4 @@
+1. npx create-react-app [application name]
+2. or we can use npm create-react-app [application name]
+   (when we use npm create-react-app it install globally, After install using npm
+    we don't need re run npm or npx use create-react-app [application-name])
