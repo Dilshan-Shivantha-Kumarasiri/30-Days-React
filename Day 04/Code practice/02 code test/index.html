@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root">
+
+</div>
+
+<script type="text/babel">
+    let root = document.getElementById("root")
+
+    // how to use props as a functional parameter
+    let App = (prop) => {
+        console.log("prop :"+prop) // object
+        return (
+            <>
+                <h1>{prop.welcome}</h1>
+                <h1>{prop.name}</h1>
+            </>
+        );
+    }
+
+    function f(data) {
+        console.log(data) // undefined
+    }
+
+    ReactDOM.render(<App />, root)
+
+</script>
+</body>
+</html>
